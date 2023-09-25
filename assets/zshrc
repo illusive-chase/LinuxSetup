@@ -7,4 +7,4 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-
+alias pycnt="find . -type f -name "*.py" | xargs wc -l"
