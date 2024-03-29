@@ -1,4 +1,5 @@
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
-sh Miniconda3-latest-Linux-x86_64.sh && \
-source ~/.zshrc && \
-conda config --set changeps1 False
+bash Miniconda3-latest-Linux-x86_64.sh && \
+~/miniconda3/bin/conda init zsh && \
+~/miniconda3/bin/conda config --set changeps1 False && \
+source ~/.zshrc

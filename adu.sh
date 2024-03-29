@@ -13,7 +13,7 @@ echo "User configs are set." && \
 # miniconda
 
 cp /home/dpku/Miniconda3-latest-Linux-x86_64.sh /data/$1 && \
-echo "bash /data/$1/Miniconda3-latest-Linux-x86_64.sh && source /data/$1/.zshrc && conda config --set changeps1 False" > /data/$1/install.sh && \
+echo "bash /data/$1/Miniconda3-latest-Linux-x86_64.sh && /data/$1/miniconda3/bin/conda init zsh && /data/$1/miniconda3/bin/conda config --set changeps1 False && source /data/$1/.zshrc" > /data/$1/install.sh && \
 
 echo "Miniconda installation script is set." && \
 
