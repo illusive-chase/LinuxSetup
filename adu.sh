@@ -3,10 +3,10 @@
 ADMIN=yekai
 DATA=/root/autodl-tmp/data
 
-sudo mkdir $DATA/$1 && \
-sudo useradd $1 && \
-echo ">>> Passwd >>>" && sudo passwd $1 && \
-sudo usermod -d $DATA/$1 -s /bin/zsh $1 && \
+mkdir $DATA/$1 && \
+useradd $1 && \
+echo ">>> Passwd >>>" && passwd $1 && \
+usermod -d $DATA/$1 -s /bin/zsh $1 && \
 cp $DATA/$ADMIN/LinuxSetup/assets/oh-my-zsh $DATA/$1/.oh-my-zsh -r && \
 cp $DATA/$ADMIN/LinuxSetup/assets/zshrc $DATA/$1/.zshrc && \
 sudo chown $1 -R $DATA/$1 && \
