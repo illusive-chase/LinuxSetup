@@ -1,3 +1,32 @@
+function proxy_on() {
+    local is_quiet=false
+
+    export http_proxy=http://127.0.0.1:7897
+    export https_proxy=http://127.0.0.1:7897
+    export no_proxy=127.0.0.1,localhost
+    export HTTP_PROXY=http://127.0.0.1:7897
+    export HTTPS_PROXY=http://127.0.0.1:7897
+    export NO_PROXY=127.0.0.1,localhost
+	git config --global https.proxy 'http://127.0.0.1:7897'
+	git config --global http.proxy 'http://127.0.0.1:7897'
+
+    if [ $is_quiet != "true" ]; then
+        echo -e "\033[0;32m[√] Proxy started: 7897.\033[0m"
+    fi
+}
+
+function proxy_off() {
+    local is_quiet=false
+
+    unset http_proxy https_proxy no_proxy HTTP_PROXY HTTPS_PROXY NO_PROXY
+	git config --global --unset http.proxy
+	git config --global --unset http.proxy
+
+    if [ $is_quiet != "true" ]; then
+        echo -e "\033[0;31m[×] Proxy closed.\033[0m"
+    fi
+}
+
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="ys"
 plugins=(
