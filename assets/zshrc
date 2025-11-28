@@ -20,7 +20,7 @@ function proxy_off() {
 
     unset http_proxy https_proxy no_proxy HTTP_PROXY HTTPS_PROXY NO_PROXY
 	git config --global --unset http.proxy
-	git config --global --unset http.proxy
+	git config --global --unset https.proxy
 
     if [ $is_quiet != "true" ]; then
         echo -e "\033[0;31m[×] Proxy closed.\033[0m"
