@@ -6,7 +6,7 @@ HOME=/home/user
 PWD=\$`echo $1@pku!`
 
 mkdir $DATA/$1 && \
-useradd $1 -p `openssl passwd -1 $PWD` $1 && \
+useradd -p `openssl passwd -1 $PWD` $1 && \
 usermod -d $DATA/$1 -s /bin/zsh $1 && \
 cp $HOME/LinuxSetup/assets/oh-my-zsh $DATA/$1/.oh-my-zsh -r && \
 cp $HOME/LinuxSetup/assets/zshrc $DATA/$1/.zshrc && \
