@@ -7,7 +7,7 @@ PWD=\$`echo $1@pku!`
 
 mkdir $DATA/$1 && \
 useradd -p `openssl passwd -1 $PWD` $1 && \
-usermod -d $DATA/$1 -s /bin/zsh $1 && \
+usermod -d $DATA/$1 -s /bin/zsh $1 -aG $ADMIN && \
 cp $HOME/LinuxSetup/assets/oh-my-zsh $DATA/$1/.oh-my-zsh -r && \
 cp $HOME/LinuxSetup/assets/zshrc $DATA/$1/.zshrc && \
 # echo "export CUDA_VISIBLE_DEVICES='0,1,2,3'" >> $DATA/$1/.zshrc && \
